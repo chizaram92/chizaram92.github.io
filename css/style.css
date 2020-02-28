@@ -139,6 +139,28 @@ body{
     background-color: #FBFBFB;
     
 }
+/*****8PROJECT***/
+.project{
+	position: relative;
+	min-height: 50vh;
+}
+.project-image{
+	position: absolute;
+	right: 0;
+	z-index: -2;
+}
+.project-image img {
+	width: 500px;
+}
+.skill-type .btn{
+	background-color: transparent;
+	border: 1px blue solid;
+	color: blue ;
+	border-radius: 8%;
+}
+.skill-type li{
+	display: inline;
+}
 footer{
    margin: 1rem;
 }
