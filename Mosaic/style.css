@@ -1,0 +1,57 @@
+.wrapper{
+	display: grid;
+	/*grid-template-columns: 40% 40% 30%;
+	grid-template-columns: 1fr 2fr 1fr;
+	above all does the same with below
+	grid-template-columns: repeat(3, 1fr);
+	/*padding
+	grid-gap: 1em;
+	
+	
+	/*height
+	grid-auto-rows: 100px;
+	/**make flexible
+	grid-auto-rows: minmax(100px, auto);
+	
+	
+	/*grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	grid gap does tboth off them above thing
+	grid-gap:1em;*/
+	background: #eee;
+	grid-gap: 1em;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+	justify-content: flex-start;
+	align-content: center;
+		
+		
+	
+}
+.box1{
+	grid-column: 1/3;
+	grid-row: 1/3;
+}
+.box2{
+	grid-column: 3;
+	grid-row: 1/3;
+}
+.box3{
+	grid-column: 2/4;
+	grid-row:3;
+}
+.box4{
+	
+}
+.box5{
+	
+}
+.wrapper> div:nth-child(odd){
+	background: #ddd;
+}
+.nested{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	
+}
+ 
