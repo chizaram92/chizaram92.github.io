@@ -7,11 +7,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 	<!--Import materialize.css-->
+
 	<link type="text/css" rel="stylesheet" href="css/materialize/css/materialize.css" media="screen,projection" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+	<script>
+		$(document).ready(function() {
+			$('.sidenav').sidenav();
+		});
+	</script>
 </head>
 
 <body>
@@ -19,24 +31,32 @@
 		<!---Introduction/logo/Nav-menu END--->
 		<header>
 			<div class="top-nav">
-				<nav class="row transparent">
-					<div class="brand-logo logo col s2 l6">
-						<img src="images/logo.png"> .
-					</div>
-					<div class="menu col  right">
-						<ul>
-							<li class="menu-item"><a href='files/Creddle%20_%20Resume.pdf'>Resume</a></li>
-							<li class="menu-item"><a href='#'>Contact</a></li>
+				<div class="nav-wrapper">
+					<nav class="row transparent">
+						<a class="brand-logo logo">
+							<img src="images/logo.png"> .
+						</a>
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+						<ul class="right hide-on-med-and-down">
+							<li class="menu-item"><a href='files/Chizaram%20Chinedu%20Front%20End%20Developer.pdf'>Resume</a></li>
+							<li class="menu-item"><a href='#contact'>Contact</a></li>
 							<li class="menu-item"><a href='#'>Blog</a></li>
 
 						</ul>
-					</div>
-				</nav>
+
+					</nav>
+				</div>
+				<ul class="sidenav" id="mobile-demo">
+					<li class="menu-item"><a href='files/Chizaram%20Chinedu%20Front%20End%20Developer.pdf'>Resume</a></li>
+					<li class="menu-item"><a href='#contact'>Contact</a></li>
+					<li class="menu-item"><a href='#'>Blog</a></li>
+				</ul>
 			</div>
 			<div class="row">
-				<div class="introduction col m8 l10">
+				<div class="introduction col m8 l10 s12">
 					<h1 class="intro_hello">Hello!</h1>
-					<h3 class="intro"> I'm <span>Chinedu Chizaram</span>, a design-minded front-end software engineer focused on building beautiful interfaces &amp; experiences .</h3>
+					<p class="intro flow-text"> I'm <span>Chinedu Chizaram</span>, a design-minded front-end software engineer focused on building beautiful interfaces &amp; experiences .</p>
 				</div>
 			</div>
 		</header>
@@ -48,11 +68,11 @@
 			<div class="section-title col m12">
 				Background
 			</div>
-			<div class='col m4'></div>
+			<div class='col m4 s12'></div>
 			<div class="section-content col m8 s12 ">
-				
-				<p>Hello! my name is Chizaram Chinedu. I'm a software engineer based in Houston, Texas who enjoys building mobile-friendly Web applications using modern framworks. In 2018, I joined Tryble- a software company based in Nigeria where I worked remotely for 5 months. I was responsible for transferring their stack from a LAMP stack to a MERN stack. I'm currently working for Rd3studios- a small agency based in Houston.
-When I'm not coding, I enjoy photography and making designs. See some of my <a href="Mosaic/index.html"><strong>works.</strong></a></p>
+
+				<p class='intr flow-text'>Hello! my name is Chizaram Chinedu. I'm a software engineer based in Houston, Texas who enjoys building mobile-friendly Web applications using modern framworks. In 2018, I joined Tryble- a software company based in Nigeria where I worked remotely for 5 months. I was responsible for transferring their stack from a LAMP stack to a MERN stack. I'm currently working for Rd3studios- a small agency based in Houston.
+					When I'm not coding, I enjoy photography and making designs. See some of my <a href="Mosaic/index.html"><strong>works.</strong></a></p>
 			</div>
 
 		</section>
@@ -67,7 +87,7 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 			<div class="section-content col m8 s12 ">
 				<div class="skills row">
 					<!---Skills- Languages_--->
-					<div class="skills-category col m4">
+					<div class="skills-category col s12 m4">
 						<div class="skills-category-label">Languages</div>
 						<ul>
 							<li class="skills-category-label-item">Python</li>
@@ -78,7 +98,7 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 						</ul>
 					</div>
 					<!---Skills- Framework_--->
-					<div class="skills-category col m4">
+					<div class="skills-category col s12 m4">
 						<div class="skills-category-label">Framework</div>
 						<ul>
 							<li class="skills-category-label-item">React</li>
@@ -90,7 +110,7 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 						</ul>
 					</div>
 					<!---Skills- Tools_--->
-					<div class="skills-category col m4">
+					<div class="skills-category col s12 m4">
 						<div class="skills-category-label">Tools</div>
 						<ul>
 							<li class="skills-category-label-item">Postman</li>
@@ -112,81 +132,87 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 
 		<!---section experience/projects-->
 		<section class="section experience">
-			<div class="section-title col ">
-				Experience/Projects
+			<div class="section-title col s12">
+				Projects
 			</div>
 			<div class="section-content row ">
 				<!--project-tryble -->
-		<a href="http://vecchiags.com/" TARGET="_blank">	<div class="project row" id="vecchia">
-					<div class="project-image col m4">
-						<img src="images/vechhia.PNG">
-					</div>
-					<div class="col m8"></div>
-					<div class="col offset-m4">
-						<div class="project-name">
-							<a>Vechhia Global Services</a>
+				<a href="http://vecchiags.com/" TARGET="_blank">
+					<div class="project row" id="vecchia">
+						<div class="project-image col m4">
+							<img src="images/vechhia.PNG">
 						</div>
-						<p>A game based consultant company that specializes in provdigin analysis for betting companies.</p>
-						<div class="skill-type">
-							<ul>
-
-								<li><a class="btn">HTML</a></li>
-								<li><a class="btn">CSS</a></li>
-								<li><a class="btn">jQuery</a></li>
-							</ul>
-						</div>
-					</div>
-			</div></a>
-				
-				<!--project-Routed -->
-			<a href="https://github.com/chizaram92/adasa" TARGET="_blank">	<div class="project row" id='ecom'>
-					<div class="project-image col m4">
-						<img src="images/ecom.PNG">
-					</div>
 						<div class="col m8"></div>
-					<div class="col offset-m4">
-						<div class="project-name">
-							<a href="#">ECOMMERCE FASHION WEBSITE </a>
-						</div>
-						<p>An eccomerce Website with all functionalaties that ranges from checkout to selecting sizes of </p>
-						<div class="skill-type">
-							<ul>
+						<div class="col offset-m4">
+							<div class="project-name">
+								<a>Vechhia Global Services</a>
+							</div>
+							<p>A game based consultant company that specializes in provdigin analysis for betting companies.</p>
+							<div class="skill-type">
+								<ul>
 
-								<li><a class="btn">HTML</a></li>
-								<li><a class="btn">CSS</a></li>
-								<li><a class="btn">jQuery</a></li>
-								<li><a class="btn">PHP</a></li>
-								<li><a class="btn">MATERIALIZE</a></li>
-								<li><a class="btn">WORDPRESS</a></li>
-							</ul>
+									<li><a class="btn">HTML</a></li>
+									<li><a class="btn">CSS</a></li>
+									<li><a class="btn">jQuery</a></li>
+								</ul>
+							</div>
 						</div>
-
 					</div>
-				</div></a>
+				</a>
+
+				<!--project-Routed -->
+				<a href="https://github.com/chizaram92/adasa" TARGET="_blank">
+					<div class="project row" id='ecom'>
+						<div class="project-image col m4">
+							<img src="images/ecom.PNG">
+						</div>
+						<div class="col m8"></div>
+						<div class="col offset-m4">
+							<div class="project-name">
+								<a href="#">ECOMMERCE FASHION WEBSITE </a>
+							</div>
+							<p>An eccomerce Website with all functionalaties that ranges from checkout to selecting sizes of </p>
+							<div class="skill-type">
+								<ul>
+
+									<li><a class="btn">HTML</a></li>
+									<li><a class="btn">CSS</a></li>
+									<li><a class="btn">jQuery</a></li>
+									<li><a class="btn">PHP</a></li>
+									<li><a class="btn">MATERIALIZE</a></li>
+									<li><a class="btn">WORDPRESS</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</a>
 				<!--project-tryble -->
-				<a href="#" TARGET="_blank"><div class="project row ">
-					<div class="project-image col m4">
-						<img src="images/tryble.png">
-					</div>
-					<div class="col m8"></div>
-					<div class="col offset-m4">
-						<div class="project-name">
-							<a href="#">Tryble</a>
+				<a href="#" TARGET="_blank">
+					<div class="project row ">
+						<div class="project-image col m4">
+							<img src="images/tryble.png">
 						</div>
-						<p>Tryble is a platform for african tech entrepreneurs to collobrate with other tech professionals by eliminating the stress of </p>
-						<div class="skill-type">
-							<ul>
+						<div class="col m8"></div>
+						<div class="col offset-m4">
+							<div class="project-name">
+								<a href="#">Tryble</a>
+							</div>
+							<p>Tryble is a platform for african tech entrepreneurs to collobrate with other tech professionals by eliminating the stress of </p>
+							<div class="skill-type">
+								<ul>
 
-								<li><a class="btn">HTML</a></li>
-								<li><a class="btn">CSS</a></li>
-								<li><a class="btn">REACTJS</a></li>
-								<li><a class="btn">MONGODB</a></li>
-								<li><a class="btn">NODEJS</a></li>
-							</ul>
+									<li><a class="btn">HTML</a></li>
+									<li><a class="btn">CSS</a></li>
+									<li><a class="btn">REACTJS</a></li>
+									<li><a class="btn">MONGODB</a></li>
+									<li><a class="btn">NODEJS</a></li>
+								</ul>
+							</div>
+
 						</div>
-
 					</div>
-					</div></a>
+				</a>
 			</div>
 
 		</section>
@@ -247,10 +273,16 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 				<div class='col m4'>
 				</div>
 				<div class="col m8">
-					<a href='https://www.linkedin.com/in/chizaram-chinedu-b75bb0145/' TARGET="_blank" class="contact-link"><h3>LINKEDIN <span class="icon-social-linkedin"></span></h3></a>
-					<a href='https://github.com/chizaram92' TARGET="_blank" class="contact-link"><h3>GITHUB <span class="icon-social-github"></span></h3></a>
-					<a href='' class="contact-link"><h3>EMAIL <span class="icon-envelope"></span></h3></a>
-					
+					<a href='https://www.linkedin.com/in/chizaram-chinedu-b75bb0145/' TARGET="_blank" class="contact-link">
+						<h3>LINKEDIN <span class="icon-social-linkedin"></span></h3>
+					</a>
+					<a href='https://github.com/chizaram92' TARGET="_blank" class="contact-link">
+						<h3>GITHUB <span class="icon-social-github"></span></h3>
+					</a>
+					<a href='' class="contact-link">
+						<h3>EMAIL <span class="icon-envelope"></span></h3>
+					</a>
+
 				</div>
 			</div>
 		</section>
@@ -271,5 +303,6 @@ When I'm not coding, I enjoy photography and making designs. See some of my <a h
 
 	</div>
 </body>
+	
 
 </html>
